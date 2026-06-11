@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/books.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Library</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li id="register-nav"><a href="register.html">Register</a></li>
+                <li id="login-nav"><a href="login.html">Login</a></li>
+                <li id="admin-nav"><a href="admin.html">Admin</a></li>
+                <li id="logout-nav" style="display: none;"><a href="#" id="logout-link">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-slider">
+    <!-- Previous Arrow -->
+    <div class="slider-arrow prev" onclick="changeSlide(-1)">&#10094;</div>
+    
+    <!-- Slides -->
+    <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=400&q=80" 
+             alt="Library Welcome"
+             onerror="this.src='img/library-default.jpg'">
+        <div class="slide-content">
+            <h1>Welcome to Our Library</h1>
+            <p>Discover thousands of books for your reading pleasure</p>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=400&q=80" 
+             alt="New Arrivals"
+             onerror="this.src='img/library-default.jpg'">
+        <div class="slide-content">
+            <h1>New Arrivals</h1>
+            <p>Check out our latest additions to the collection</p>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=400&q=80" 
+             alt="Visit Us Today"
+             onerror="this.src='img/library-default.jpg'">
+        <div class="slide-content">
+            <h1>Visit Us Today</h1>
+            <p>Register now</p>
+        </div>
+    </div>
+    
+    <!-- Next Arrow -->
+    <div class="slider-arrow next" onclick="changeSlide(1)">&#10095;</div>
+</div>
+
+    <div class="container">
+        <section class="featured-books">
+            <h2>Featured Books</h2>
+            <div class="books-grid" id="featured-books">
+                <!-- Books will be loaded here by JavaScript -->
+            </div>
+            <div class="text-center">
+                <a href="books.html" class="btn">View All Books</a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/books.js"></script>
+</body>
+</html>

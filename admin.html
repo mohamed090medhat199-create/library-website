@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Library</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Library</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li id="register-nav"><a href="register.html">Register</a></li>
+                <li id="login-nav"><a href="login.html">Login</a></li>
+                <li id="admin-nav"><a href="admin.html" class="active">Admin</a></li>
+                <li id="logout-nav" style="display: none;"><a href="#" id="logout-link">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="admin-section">
+            <h1>Admin Dashboard</h1>
+            
+            <div class="add-book-form">
+                <h2>Add New Book</h2>
+                <form id="add-book-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edition">Edition</label>
+                        <input type="text" id="edition" name="edition" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image URL</label>
+                        <input type="text" id="image" name="image" placeholder="https://example.com/book.jpg" required>
+                    </div>
+                    <button type="submit" class="btn">Add Book</button>
+                </form>
+            </div>
+
+            <div class="books-table">
+                <h2>All Books</h2>
+                <table id="books-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Edition</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Books will be loaded here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/books.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
